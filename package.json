@@ -1,7 +1,7 @@
 {
-  "name": "packspec",
+  "name": "goodread",
   "version": "0.2.0",
-  "description": "packspec-js",
+  "description": "goodread-js",
   "license": "MIT",
   "engines": {
     "node": ">=4"
@@ -11,7 +11,7 @@
     "src"
   ],
   "bin": {
-    "packspec-js": "lib/index.js"
+    "goodread-js": "lib/index.js"
   },
   "scripts": {
     "build": "babel src --out-dir lib --copy-files",
@@ -68,13 +68,13 @@
     "email": "eskarev@gmail.com",
     "url": "https://github.com/roll"
   },
-  "homepage": "https://github.com/packspec/packspec-js",
-  "bugs": "https://github.com/packspec/packspec-js/issues",
+  "homepage": "https://github.com/goodread/goodread-js",
+  "bugs": "https://github.com/goodread/goodread-js/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/packspec/packspec-js.git"
+    "url": "https://github.com/goodread/goodread-js.git"
   },
   "keywords": [
-    "packspec"
+    "goodread"
   ]
 }
