@@ -1,7 +1,6 @@
 const fs = require('fs')
-const vm = require('vm')
 const axios = require('axios')
-const {spawn} = require('child_process');
+const {spawn} = require('child_process')
 const helpers = require('./helpers')
 
 
@@ -20,7 +19,7 @@ class DocumentList {
       let editPath = null
       let syncPath = null
       for (const item of config.documents) {
-        if (path === item['main']) {
+        if (path === item.main) {
           editPath = item.edit
           syncPath = item.sync
           break
@@ -171,18 +170,18 @@ async function parseDocument(contents) {
     }
 
     // Codeblock
-    if (line.startsWith('```javascript')){
+    if (line.startsWith('```javascript')) {
       if (line.includes('goodread')) {
         capture = true
       }
       codeblock = ''
       continue
-      }
+    }
     if (line.startsWith('```')) {
       if (capture) {
         elements.push({
-          'type': 'codeblock',
-          'value': codeblock,
+          type: 'codeblock',
+          value: codeblock,
         })
       }
       capture = false
@@ -213,11 +212,11 @@ async function validateDocument(elements, {exitFirst}) {
 
     // Heading
     if (element.type === 'heading') {
-      helpers.printMessage(element.value, type='heading', {level: element.level})
-        if (!title) {
-          title = element.value
-          helpers.printMessage(null, 'separator')
-        }
+      helpers.printMessage(element.value, 'heading', {level: element.level})
+      if (!title) {
+        title = element.value
+        helpers.printMessage(null, 'separator')
+      }
 
     // Codeblock
     } else if (element.type === 'codeblock') {
@@ -232,7 +231,7 @@ async function validateDocument(elements, {exitFirst}) {
           helpers.printMessage(line, 'failure', {exception})
           if (exitFirst) {
             helpers.printMessage(scope, 'scope')
-              throw exception
+            throw exception
           }
           failed += 1
         } else if (lineNumber > exceptionLine) {

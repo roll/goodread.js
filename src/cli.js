@@ -13,15 +13,15 @@ async function main() {
   let exitFirst = false
   const argv = [...process.argv]
   for (const arg of argv[0].endsWith('node') ? argv.slice(2) : argv.slice(1)) {
-      if (['-e', '--edit'].includes(arg)) {
-          edit = true
-      } else if (['-s', '--sync'].includes(arg)) {
-          sync = true
-      } else if (['-x', '--exit-first'].includes(arg)) {
-          exitFirst = true
-      } else {
-          paths.push(arg)
-      }
+    if (['-e', '--edit'].includes(arg)) {
+      edit = true
+    } else if (['-s', '--sync'].includes(arg)) {
+      sync = true
+    } else if (['-x', '--exit-first'].includes(arg)) {
+      exitFirst = true
+    } else {
+      paths.push(arg)
+    }
   }
 
   // Prepare
@@ -30,7 +30,7 @@ async function main() {
 
   // Edit
   if (edit) {
-      await documents.edit()
+    await documents.edit()
 
   // Sync
   } else if (sync) {

@@ -52,7 +52,7 @@ function runCodeblock(codeblock, scope) {
     }
     lines.push(line)
   }
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let codeblock = 'async function main() {'
     for (const line of lines) codeblock += `${line}\n`
     for (const name of names) codeblock += `_exports.${name} = ${name}\n`
@@ -117,7 +117,7 @@ function printMessage(message, type, {level, exception, passed, failed, skipped}
   }
   if (text) {
     if (state.lastMessageType !== type) {
-      text = '\n' + text
+      text = `\n${text}`
     }
     console.log(emojify(text))
   }
