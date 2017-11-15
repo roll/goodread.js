@@ -1,7 +1,7 @@
 {
   "name": "goodread",
-  "version": "0.2.0",
-  "description": "Test runner for README.md. Support for Python/JavaScript/Ruby/PHP code blocks. Integration with hackmd.io.",
+  "version": "0.3.0",
+  "description": "goodread-js",
   "license": "MIT",
   "engines": {
     "node": ">=4"
