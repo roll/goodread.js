@@ -1,6 +1,6 @@
 {
   "name": "goodread",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Doctest for markdown with comment-based assertions. Python/JavaScript/Ruby/PHP test runners and hackmd.io integration.",
   "license": "MIT",
   "engines": {
